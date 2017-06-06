@@ -1,15 +1,36 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="headerColor">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Main</ion-title>
+    <div class="header">
+      <div class="logo">
+        <img src="assets/img/logo.png" class="slide-image"/>
+      </div>
+      <div class="search" style="">
+        <div class="location" style="display: flex; float: right;">
+          <div class="left">
+            <p style="margin-top: 0; margin-bottom: 0; margin-right: 3vw; color: white;  font-size: x-small;">화성시 향남읍</p>
+          </div>
+          <div class="right" style="margin-right: 2vw;">
+            <ion-icon ios="ios-pin" md="md-pin"></ion-icon>
+          </div>
+        </div>
+        <div class="bottom" style="display: flex; float: right;">
+          <div class="input">
+            <ion-searchbar  class="search-bar"></ion-searchbar>
+          </div>
+          <div class="searchBtn" style="margin-right: 2vw;  margin-top: 1vh;">
+            <ion-icon ios="ios-search" md="md-search"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
- <div padding>
-  <ion-segment [(ngModel)]="pet" class="main-segment">
+<ion-content>
+  <ion-segment [(ngModel)]="menu" class="main-segment">
    <ion-segment-button value="main" class="col1" >커 피</ion-segment-button>
     <ion-segment-button value="two" class="col2">아이스크림</ion-segment-button>
     <ion-segment-button value="three" class="col3">패스트푸드</ion-segment-button>
@@ -17,11 +38,11 @@
     <ion-segment-button value="five" class="col5">음 악</ion-segment-button>
     <ion-segment-button value="event" class="col6">Event</ion-segment-button>
   </ion-segment>
-</div>
   <div [ngSwitch]="menu">
     <ion-list *ngSwitchCase="'main'">
       <div class="panel">
-        <img src="assets/image/panel.png" class="" style="max-width: 80vw"/>
+        <img src="assets/img/panel.png" class="" style="max-width: 80vw"/>
       </div>
+    </ion-list>
   </div>
 </ion-content>
