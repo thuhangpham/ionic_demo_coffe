@@ -1,3 +1,11 @@
 page-home {
-
+  .main-segment{
+      max-height: 1rem;
+      margin-bottom: 2rem;
+  }
+  .segment-md .segment-button.activated, .segment-md .segment-button.segment-activated {
+    border-color: transparent;
+    opacity: 1;
+    background-color: #8A0000;
+  }
 }

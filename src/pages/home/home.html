@@ -3,16 +3,25 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>Main</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+ <div padding>
+  <ion-segment [(ngModel)]="pet" class="main-segment">
+   <ion-segment-button value="main" class="col1" >커 피</ion-segment-button>
+    <ion-segment-button value="two" class="col2">아이스크림</ion-segment-button>
+    <ion-segment-button value="three" class="col3">패스트푸드</ion-segment-button>
+    <ion-segment-button value="four" class="col4">영 화</ion-segment-button>
+    <ion-segment-button value="five" class="col5">음 악</ion-segment-button>
+    <ion-segment-button value="event" class="col6">Event</ion-segment-button>
+  </ion-segment>
+</div>
+  <div [ngSwitch]="menu">
+    <ion-list *ngSwitchCase="'main'">
+      <div class="panel">
+        <img src="assets/image/panel.png" class="" style="max-width: 80vw"/>
+      </div>
+  </div>
 </ion-content>
